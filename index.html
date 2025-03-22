@@ -1,79 +1,169 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meine Dienstleistungen</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helfende Hand – Dienstleistungen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background-color: #3f51b5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e0e0e0;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #3f51b5;
+            font-weight: bold;
+        }
+        main {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .service {
+            display: none;
+        }
+        .service.active {
+            display: block;
+        }
+        .service img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .price-list {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .price-list h3 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0e0e0;
+            color: #777;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Allround-Service</h1>
+    <header>
+        <h1>Helfende Hand – Ihr Allround-Service</h1>
+        <p>Zuverlässig. Schnell. Preiswert.</p>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#ueber-uns">Über uns</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
+        <a href="#" onclick="showService('fensterputzen')">🧼 Fensterputzen</a>
+        <a href="#" onclick="showService('umzug')">🚚 Umzugshilfe</a>
+        <a href="#" onclick="showService('garten')">🌿 Gartenpflege</a>
+        <a href="#" onclick="showService('sperrmuell')">🗑️ Sperrmüllentsorgung</a>
+        <a href="#" onclick="showService('moebel')">🛠️ Möbelmontage/Abbau</a>
+        <a href="#" onclick="showService('streichen')">🎨 Wände Streichen</a>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Ihr Helfer für Haus & Garten</h2>
-    <p>Zuverlässig, schnell und professionell – wir übernehmen die Arbeit für Sie!</p>
-  </section>
+    <main>
+        <div id="fensterputzen" class="service active">
+            <img src="https://source.unsplash.com/800x400/?window,cleaning" alt="Fensterputzen">
+            <div class="price-list">
+                <h3>Fensterputzen – Preisliste</h3>
+                <ul>
+                    <li>Wohnung bis 50m²: 39€</li>
+                    <li>Haus bis 100m²: 59€</li>
+                    <li>Jede weitere Stunde: 25€</li>
+                </ul>
+            </div>
+        </div>
 
-  <section id="leistungen">
-    <h2>Unsere Dienstleistungen</h2>
-    <div class="leistungen-grid">
-      <div class="leistung">
-        <h3>🧼 Fensterputzen</h3>
-        <p>Klare Sicht mit professioneller Fensterreinigung.</p>
-      </div>
-      <div class="leistung">
-        <h3>🚚 Umzugshilfe</h3>
-        <p>Wir packen an – ob Transport oder Tragen.</p>
-      </div>
-      <div class="leistung">
-        <h3>🌿 Gartenpflege</h3>
-        <p>Rasenmähen, Hecken schneiden und mehr.</p>
-      </div>
-      <div class="leistung">
-        <h3>🗑️ Sperrmüllentsorgung</h3>
-        <p>Wir entsorgen für Sie alles fachgerecht.</p>
-      </div>
-      <div class="leistung">
-        <h3>🛠️ Möbelmontage & Abbau</h3>
-        <p>Auf- und Abbau von Möbeln aller Art.</p>
-      </div>
-      <div class="leistung">
-        <h3>🎨 Wände streichen</h3>
-        <p>Frischer Anstrich für Ihre Räume.</p>
-      </div>
-    </div>
-  </section>
+        <div id="umzug" class="service">
+            <img src="https://source.unsplash.com/800x400/?moving,boxes" alt="Umzugshilfe">
+            <div class="price-list">
+                <h3>Umzugshilfe – Preisliste</h3>
+                <ul>
+                    <li>2 Helfer inkl. Transporter: 89€/Std</li>
+                    <li>Jede zusätzliche Person: 25€/Std</li>
+                    <li>Verpackungsmaterial: ab 15€</li>
+                </ul>
+            </div>
+        </div>
 
-  <section id="ueber-uns">
-    <h2>Über uns</h2>
-    <p>Wir sind ein engagiertes Team, das Ihnen bei allen Arbeiten rund ums Haus zur Seite steht. Kundenfreundlichkeit, Pünktlichkeit und faire Preise stehen bei uns an erster Stelle.</p>
-  </section>
+        <div id="garten" class="service">
+            <img src="https://source.unsplash.com/800x400/?gardening,lawn" alt="Gartenpflege">
+            <div class="price-list">
+                <h3>Gartenpflege – Preisliste</h3>
+                <ul>
+                    <li>Rasenmähen: ab 30€</li>
+                    <li>Heckenschnitt: ab 45€</li>
+                    <li>Laubentfernung: ab 25€</li>
+                </ul>
+            </div>
+        </div>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>📞 Telefon: 0123 456789<br>
-       📧 E-Mail: kontakt@allround-service.de
-    </p>
-    <!-- Optionales Kontaktformular -->
-    <!-- <form action="https://formspree.io/f/DEINE_ID" method="POST">
-      <input type="text" name="name" placeholder="Ihr Name" required>
-      <input type="email" name="email" placeholder="Ihre E-Mail" required>
-      <textarea name="nachricht" placeholder="Ihre Nachricht" required></textarea>
-      <button type="submit">Absenden</button>
-    </form> -->
-  </section>
+        <div id="sperrmuell" class="service">
+            <img src="https://source.unsplash.com/800x400/?junk,trash" alt="Sperrmüllentsorgung">
+            <div class="price-list">
+                <h3>Sperrmüllentsorgung – Preisliste</h3>
+                <ul>
+                    <li>Kleinmengen (bis 2m³): 49€</li>
+                    <li>Großmengen (bis 5m³): 89€</li>
+                    <li>Jede weitere m³: 20€</li>
+                </ul>
+            </div>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Allround-Service – Alle Rechte vorbehalten.</p>
-  </footer>
+        <div id="moebel" class="service">
+            <img src="https://source.unsplash.com/800x400/?furniture,assembly" alt="Möbelmontage">
+            <div class="price-list">
+                <h3>Möbelmontage/Abbau – Preisliste</h3>
+                <ul>
+                    <li>Schrankmontage: ab 49€</li>
+                    <li>Abbau & Verpackung: ab 39€</li>
+                    <li>Stundenpreis: 25€/Std</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="streichen" class="service">
+            <img src="https://source.unsplash.com/800x400/?painting,wall" alt="Wände Streichen">
+            <div class="price-list">
+                <h3>Wände Streichen – Preisliste</h3>
+                <ul>
+                    <li>Zimmer bis 20m²: ab 79€</li>
+                    <li>Komplettwohnung: ab 249€</li>
+                    <li>Materialkosten: inkl.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Helfende Hand – Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        function showService(id) {
+            const allServices = document.querySelectorAll('.service');
+            allServices.forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </body>
 </html>
